@@ -38,13 +38,13 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           readinessProbe:
             httpGet:
-              path: /
+              path: {{ .Values.djangoServer.probe.readiness.path }}
               port: django
             initialDelaySeconds: 15
             periodSeconds: 10
           livenessProbe:
             httpGet:
-              path: /
+              path: {{ .Values.djangoServer.probe.liveness.path }}
               port: django
             failureThreshold: 1
             periodSeconds: 10
