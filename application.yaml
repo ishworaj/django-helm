@@ -10,7 +10,7 @@ spec:
     path: dev
     helm:
       valueFiles:
-        - values.yaml
+        - dev/values.yaml
       releaseName: django-app
   destination:
     namespace: webapp
