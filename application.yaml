@@ -6,14 +6,12 @@ metadata:
 spec:
   source:
     repoURL: https://github.com/ishworaj/django-helm.git
-    targetRevision: HEAD
-    chart: django
+    targetRevision: master
+    path: .
     helm:
       valueFiles:
         - values.yaml
       releaseName: django-app
-    directory:
-      recurse: true
   destination:
     namespace: webapp
     server: https://kubernetes.default.svc
