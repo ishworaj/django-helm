@@ -7,10 +7,10 @@ spec:
   source:
     repoURL: https://github.com/ishworaj/django-helm.git
     targetRevision: master
-    path: dev
+    path: dev/djangoapp
     helm:
       valueFiles:
-        - dev/values.yaml
+        - values.yaml
       releaseName: django-app
   destination:
     namespace: webapp
